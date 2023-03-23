@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Frasesfamosas</string>
+    <string name="NewQuo">Get a new quotation</string>
+    <string name="Favourite">Favourite quotations</string>
+    <string name="Settings">Settings</string>
+    <string name="About">About</string>
+</resources>
