@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.MainActivity">
+    tools:context="ui.MainActivity"
+    android:layout_gravity="center">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:defaultNavHost="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:navGraph="@navigation/nav_graph"
+        tools:layout="@layout/fragment_new_quotation" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -17,7 +29,7 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="match_parent"
             app:titleTextColor="@color/black" />
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -26,21 +38,12 @@
         android:layout_height="wrap_content"
         android:text="Hello World!" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <com.google.android.material.navigationrail.NavigationRailView
         android:id="@+id/bottomMenu"
-        android:layout_width="match_parent"
-        android:layout_height="83dp"
-        android:layout_gravity="bottom"
-        app:menu="@menu/menu_navigation" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        app:defaultNavHost="true"
         android:layout_width="wrap_content"
-        android:layout_height="643dp"
-        tools:layout="@layout/fragment_new_quotation"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        app:navGraph="@navigation/nav_graph"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+        android:layout_height="302dp"
+        android:layout_gravity="bottom"
+
+        app:menu="@menu/menu_navigation" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
